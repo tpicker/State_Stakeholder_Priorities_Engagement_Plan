@@ -1,0 +1,991 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="description" content="Assess 17 AI facility stakeholders, choose three potential barriers, explain your engagement plan, and print or save a PDF.">
+  <title>State Stakeholder Priorities &amp; Engagement Plan | AI Facility Development</title>
+  <style>
+    :root{font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#183147;background:#f3f6f8;font-synthesis:none;--navy:#07345d;--teal:#006d80;--line:#d8e2e9;--muted:#4b6375;--paper:#fff;--error:#a32b27}
+    *{box-sizing:border-box}
+    body{margin:0;line-height:1.55}
+    button,input,select,textarea{font:inherit}
+    button,a,input,select,textarea{-webkit-tap-highlight-color:transparent}
+    button,a{touch-action:manipulation}
+    a{color:var(--navy);text-underline-offset:3px}
+    button{cursor:pointer}
+    button:disabled{cursor:wait;opacity:.6}
+    :focus-visible{outline:3px solid #187fc5;outline-offset:4px}
+    [hidden]{display:none!important}
+    .skip-link{position:absolute;left:16px;top:-80px;background:#fff;padding:12px;z-index:10}
+    .skip-link:focus{top:12px}
+    .page{max-width:1180px;margin:0 auto;padding:28px 24px 44px}
+    .hero{background:var(--navy);color:#fff;border-radius:16px;padding:30px 34px}
+    .eyebrow{margin:0 0 10px;font-size:.74rem;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:#d2e4f1}
+    h1{font-size:clamp(1.65rem,3.5vw,2.45rem);line-height:1.18;letter-spacing:-.035em;margin:0 0 8px;max-width:870px}
+    .hero-subtitle{font-size:1.06rem;margin:0;color:#d8e9f5}
+    .hero-rule{width:40px;height:3px;background:#6bc7c6;margin:20px 0 16px;border:0}
+    .purpose{max-width:850px;color:#e5eff6;font-size:.95rem;margin:0}
+    .toolbar{display:flex;gap:14px;justify-content:space-between;align-items:center;flex-wrap:wrap;padding:18px 0 20px}
+    .save-state{margin:0;font-size:.84rem;color:var(--muted)}
+    .action-group{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+    .button{display:inline-flex;justify-content:center;align-items:center;gap:7px;border:1px solid #b9cbd7;background:#fff;color:var(--navy);border-radius:8px;min-height:44px;padding:9px 14px;font-weight:650;font-size:.88rem;text-decoration:none;line-height:1.4}
+    .button:hover{background:#edf3f7}
+    .button.primary{background:var(--navy);color:white;border-color:var(--navy)}
+    .button.primary:hover{background:#0d476f}
+    .workspace{display:grid;grid-template-columns:258px minmax(0,1fr);gap:24px;align-items:start}
+    .sidebar{position:sticky;top:20px}
+    .progress-panel{border:1px solid var(--line);background:#fff;padding:21px 20px;border-radius:12px}
+    .section-kicker{font-size:.72rem;letter-spacing:.09em;text-transform:uppercase;font-weight:750;color:var(--muted);margin:0 0 7px}
+    .progress-number{font-size:1.32rem;font-weight:750;color:var(--navy);margin:0 0 2px;letter-spacing:-.02em}
+    .progress-description{font-size:.8rem;color:var(--muted);margin:0 0 12px}
+    progress{appearance:none;display:block;width:100%;height:6px;border:0;border-radius:9px;overflow:hidden;background:#e7eef2;margin:0 0 20px}
+    progress::-webkit-progress-bar{background:#e7eef2}
+    progress::-webkit-progress-value{background:var(--teal);border-radius:9px}
+    progress::-moz-progress-bar{background:var(--teal);border-radius:9px}
+    .impact-nav{list-style:none;padding:0;margin:0;display:grid;gap:3px}
+    .impact-nav a{display:flex;align-items:center;gap:9px;text-decoration:none;font-size:.83rem;color:var(--muted);padding:7px 0}
+    .impact-nav a:hover{color:var(--navy);text-decoration:underline}
+    .nav-status{width:19px;height:19px;border:1px solid #b8cad6;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:11px;flex:none;color:#4c6679;background:#fff}
+    .impact-nav a[data-complete="true"] .nav-status{border-color:var(--teal);background:var(--teal);color:#fff}
+    .sidebar-note{font-size:.78rem;color:var(--muted);margin:14px 2px;line-height:1.6}
+    .panel{background:#fff;border:1px solid var(--line);border-radius:12px;padding:24px;margin-bottom:18px}
+    h2{font-size:1.17rem;line-height:1.35;margin:0 0 9px;letter-spacing:-.015em;color:var(--navy)}
+    h3{font-size:1.03rem;line-height:1.4;margin:0;color:var(--navy)}
+    .support{color:var(--muted);font-size:.87rem;margin:0 0 18px}
+    .context-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px 18px}
+    .field{display:grid;gap:6px;align-content:start;min-width:0}
+    .field label,.explanation-label{font-size:.87rem;font-weight:650;color:#24465d}
+    .optional{font-size:.8rem;font-weight:400;color:var(--muted)}
+    input[type="text"],select,textarea{width:100%;border:1px solid #aebfcc;border-radius:7px;background:#fff;color:#183147;padding:10px 11px;min-width:0;font-size:1rem}
+    input[type="text"],select{min-height:44px}
+    textarea{resize:vertical;min-height:130px;line-height:1.55;margin-top:6px}
+    input::placeholder,textarea::placeholder{color:#5d7080;opacity:1}
+    .instructions{margin-top:20px;border-top:1px solid var(--line);padding-top:15px}
+    summary{cursor:pointer;font-weight:650;color:var(--navy);font-size:.9rem}
+    .instructions ol{font-size:.87rem;color:var(--muted);padding-left:22px;margin:12px 0 0}
+    .instructions li{padding:3px 0}
+    .scale-intro{margin:24px 0 16px;padding:0 2px}
+    .scale-intro p{color:var(--muted);font-size:.89rem;margin:5px 0 0}
+    .impact-card{scroll-margin-top:22px}
+    .impact-header{display:flex;gap:12px;align-items:flex-start;margin-bottom:9px}
+    .impact-index{width:30px;height:30px;background:#edf4f7;color:#38617b;font-weight:750;font-size:.76rem;border-radius:7px;display:flex;align-items:center;justify-content:center;flex:none;margin-top:1px}
+    .impact-heading{min-width:0;flex:1}
+    .completion{font-size:.74rem;color:var(--muted);display:block;margin-top:2px}
+    .completion.complete{color:#006856}
+    .impact-prompt{font-size:.86rem;color:var(--muted);margin:0 0 19px}
+    .rank-fieldset{border:0;padding:0;margin:0 0 18px;min-width:0}
+    .rank-fieldset legend{font-size:.87rem;font-weight:650;padding:0;margin-bottom:8px}
+    .rank-select{max-width:320px}
+    .rank-note{font-size:.78rem;color:var(--muted);margin:8px 0 0}
+    .field-help{font-size:.78rem;line-height:1.5;color:var(--muted);margin:6px 0 0}
+    .field-error{font-size:.83rem;color:var(--error);margin:8px 0 0;font-weight:600}
+    textarea[aria-invalid="true"],select[aria-invalid="true"]{border:2px solid var(--error)}
+    .error-summary{background:#fff3f1;border:1px solid #df9c97;border-left:4px solid var(--error);border-radius:8px;padding:16px 20px;margin-bottom:18px;font-size:.9rem}
+    .error-summary h2{font-size:1rem;color:#842823}
+    .error-summary p{margin:0}
+    .error-summary ul{margin:9px 0 0;padding-left:20px}
+    .error-summary a{color:#842823}
+    .form-end{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:2px 0 14px;flex-wrap:wrap}
+    .form-end p{margin:0;color:var(--muted);font-size:.85rem;max-width:360px}
+    .notification{border:1px solid #b9d5d7;background:#edf7f6;color:#1b575b;padding:12px 16px;border-radius:8px;font-size:.88rem;margin:0 0 18px}
+    footer{border-top:1px solid var(--line);margin-top:22px;padding-top:18px;color:var(--muted);font-size:.78rem;line-height:1.65}
+    footer p{margin:0}
+    .review-actions{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:18px}
+    .review-title{font-size:1.8rem;line-height:1.25;margin:0 0 6px;color:var(--navy);letter-spacing:-.03em}
+    .review-subtitle{margin:0 0 18px;color:var(--muted);font-size:.9rem}
+    .report-context{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px 22px;margin:20px 0 0}
+    .report-context div{min-width:0}
+    .report-context dt{font-size:.78rem;font-weight:650;color:var(--muted);margin-bottom:3px}
+    .report-context dd{font-size:.92rem;margin:0;white-space:pre-wrap;overflow-wrap:anywhere}
+    .review-status{display:inline-block;font-size:.8rem;font-weight:650;color:#125c52;background:#e9f5f1;border:1px solid #bcdacf;border-radius:6px;padding:5px 10px;margin:0}
+    .review-status.draft{color:#795019;background:#fff6e6;border-color:#e8d3a7}
+    .tablewrap{overflow-x:auto}
+    table{border-collapse:collapse;width:100%;font-size:.88rem}
+    th,td{text-align:left;padding:11px 12px;border-bottom:1px solid #e0e8ed;vertical-align:top}
+    th{font-size:.8rem;color:#395b72;background:#f0f5f7}
+    tr:last-child td{border-bottom:0}
+    .rank-cell{min-width:150px}
+    .report-rank{font-size:.84rem;font-weight:650;color:#155e6a;background:#eaf5f6;display:inline-block;padding:5px 10px;border-radius:6px;margin:12px 0 0}
+    .report-explanation{white-space:pre-wrap;overflow-wrap:anywhere;margin:14px 0 0;font-size:.92rem;line-height:1.65}
+    .report-scale{font-size:.8rem;color:var(--muted);margin:12px 0 0;line-height:1.6}
+    dialog{border:1px solid var(--line);border-radius:12px;color:#183147;padding:26px;max-width:440px;width:calc(100% - 32px);box-shadow:0 18px 70px #18314726}
+    dialog::backdrop{background:#0d263c77}
+    dialog h2{margin-bottom:12px}
+    dialog p{font-size:.9rem;color:var(--muted);margin:0 0 22px}
+    .dialog-actions{display:flex;justify-content:flex-end;gap:9px;flex-wrap:wrap}
+    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+    @media(max-width:900px){.workspace{grid-template-columns:210px minmax(0,1fr);gap:18px}.progress-panel{padding:18px 15px}.panel{padding:21px}}
+    @media(max-width:720px){.page{padding:16px 14px 30px}.hero{padding:25px 23px}.workspace{grid-template-columns:1fr;gap:16px}.sidebar{position:static}.progress-panel{padding:16px 18px}.progress-description{margin-bottom:10px}progress{margin-bottom:16px}.impact-nav{grid-template-columns:repeat(2,minmax(0,1fr));gap:0 12px}.sidebar-note{display:none}.toolbar{padding:14px 0 16px;align-items:flex-start}.panel{padding:20px}.context-grid{gap:14px}.review-title{font-size:1.5rem}.form-end{align-items:flex-start}}
+    @media(max-width:400px){.page{padding:12px 10px 24px}.hero{padding:22px 18px}.panel{padding:17px 14px}.context-grid,.report-context,.impact-nav{grid-template-columns:1fr}.action-group{gap:6px}.button{font-size:.82rem;padding:9px 11px}.impact-header{gap:9px}.impact-index{width:26px;height:26px}.hero-subtitle{font-size:.96rem}}
+    @media(prefers-reduced-motion:no-preference){.button{transition:background-color .12s,border-color .12s}}
+    @page{margin:16mm 14mm}
+    @media print{html,body{background:#fff;color:#000;font-size:11pt}.page{padding:0;max-width:none}.hero,.toolbar,.workspace,.review-actions,footer,.notification,dialog,.skip-link{display:none!important}#review{display:block!important}.panel{border:0;border-radius:0;padding:0;margin:0 0 20px;box-shadow:none}.report-header{border-bottom:2px solid #07345d;padding-bottom:17px;margin-bottom:20px}.review-title{font-size:21pt;color:#000}.review-subtitle{font-size:11pt;color:#333;margin-bottom:10px}.review-status{border:1px solid #777;background:#fff!important;color:#000!important}.report-context{gap:10px 20px}.report-context dt{font-size:9pt;color:#333}.report-context dd{font-size:10pt}.report-response{break-inside:auto;margin-bottom:22px}.report-response h3{break-after:avoid;font-size:13pt;color:#000}.report-rank{background:#fff!important;border:1px solid #777;border-radius:4px;color:#000;font-size:10pt;margin-top:7px;break-after:avoid}.report-explanation{font-size:10pt;line-height:1.5;margin-top:9px;orphans:3;widows:3}.report-scale{font-size:9pt;color:#333}.tablewrap{overflow:visible}table{font-size:10pt;table-layout:fixed}th,td{padding:7px 8px;overflow-wrap:anywhere}th{background:#f2f2f2;color:#000}th:first-child{width:65%}.rank-cell{min-width:0}thead{display:table-header-group}tr{break-inside:avoid}h2{font-size:14pt;color:#000;break-after:avoid}.report-date{color:#333}a{color:#000}}
+  
+    .progress-rows{display:grid;gap:9px;font-size:.86rem;margin:0 0 20px}.progress-rows p{margin:0}.progress-rows strong{display:block;color:var(--navy);font-size:1rem}.score-list{list-style:none;padding:0;margin:0;display:grid;gap:7px}.score-list li{display:flex;justify-content:space-between;gap:10px;font-size:.8rem;color:var(--muted)}.score-list strong{font-variant-numeric:tabular-nums;color:var(--navy)}.sidebar-links{display:grid;gap:8px;font-size:.84rem;margin:18px 0 0}.section-heading{margin:28px 0 15px;scroll-margin-top:20px}.section-heading h2{font-size:1.25rem}.section-heading p{margin:6px 0;color:var(--muted);font-size:.89rem}.explanation-box{border-left:3px solid var(--teal);background:#edf6f7;color:#27515e;padding:13px 16px;font-size:.86rem;margin:16px 0 0}.explanation-box p{margin:0}.stakeholder-card,.priority-card,#contact-panel{scroll-margin-top:20px}.assessment-header{display:flex;justify-content:space-between;gap:14px;align-items:flex-start;margin-bottom:17px}.assessment-title{min-width:0}.score-badge{flex:none;text-align:right;font-size:.75rem;color:var(--muted)}.score-badge output{display:block;color:var(--navy);font-size:1.35rem;font-weight:750;line-height:1.3;font-variant-numeric:tabular-nums}.stakeholder-controls{display:grid;grid-template-columns:1fr 1fr 1.4fr;gap:14px}.field-error{font-weight:500}.plan-fields{display:grid;gap:19px;margin-top:21px}.plan-fields textarea{min-height:105px;margin:0}.priority-title{margin-bottom:12px}.selected-name{font-size:.86rem;color:var(--muted);margin:5px 0 16px}.priority-select{max-width:100%}.field[hidden]{display:none}.selection-help{margin:7px 0 0;font-size:.8rem;color:var(--muted)}textarea:disabled{background:#f2f5f7;color:#536c7e;cursor:not-allowed}.first-contact-reason{margin-top:18px}.report-response h4{font-size:.9rem;color:#24465d;margin:18px 0 0}.report-response .report-explanation{margin-top:5px}.expo-link{font-size:.82rem}.notification.error{border-color:#df9c97;background:#fff3f1;color:#842823}.priority-summary{margin:0;padding-left:24px;color:var(--muted);font-size:.85rem}.priority-summary li{padding:4px 0}.report-context{margin-bottom:14px}.report-note{font-size:.84rem;color:var(--muted);line-height:1.6;margin:12px 0 0}
+    @media(max-width:900px){.stakeholder-controls{gap:10px}}
+    @media(max-width:720px){.progress-panel{display:grid;grid-template-columns:1fr 1fr;gap:14px 24px}.progress-panel .section-kicker{grid-column:1/-1}.progress-rows{margin:0}.score-summary{grid-column:2;grid-row:2/4}.sidebar-links{margin-top:0}.priority-status-block{grid-column:1}.assessment-header{gap:10px}.score-badge{max-width:95px}.score-badge output{font-size:1.22rem}.stakeholder-controls{grid-template-columns:1fr 1fr}.position-field{grid-column:1/-1}}
+    @media(max-width:430px){.progress-panel{display:block}.progress-rows{margin-bottom:18px}.score-summary{margin-top:18px}.sidebar-links{margin-top:18px}.assessment-header{flex-wrap:wrap}.score-badge{text-align:left;max-width:none;display:flex;align-items:baseline;gap:8px}.score-badge output{font-size:1.05rem}.assessment-title{width:100%}.stakeholder-controls{gap:12px}.field label{font-size:.84rem}}
+    @media print{.report-note{font-size:9pt;color:#333}.report-response h4{font-size:10pt;color:#000;break-after:avoid}.assessment-table th:first-child{width:32%}.assessment-table th:nth-child(2),.assessment-table th:nth-child(3){width:12%}.assessment-table th:nth-child(4){width:16%}.assessment-table th:nth-child(5){width:28%}.priority-table th:first-child{width:12%}.priority-table th:nth-child(2){width:60%}.priority-table th:nth-child(3){width:28%}.report-response .report-explanation{margin-top:5px}}
+    .score-summary summary{padding:5px 0}.score-summary .score-list{max-height:280px;overflow-y:auto;margin-top:12px;padding-right:6px}
+  </style>
+</head>
+
+<body>
+  <a class="skip-link" href="#assessment-form">Skip to stakeholder assessment</a>
+  <main class="page">
+    <header class="hero">
+      <p class="eyebrow">AI facility development · State stakeholder assessment</p>
+      <h1>State Stakeholder Priorities &amp; Engagement Plan</h1>
+      <p class="hero-subtitle">Understand influence. Identify barriers. Plan your response.</p>
+      <div class="hero-rule" aria-hidden="true"></div>
+      <p class="purpose">Evaluate how stakeholders could influence your proposed AI facility in the selected state. Identify the three stakeholders with the greatest potential to delay, constrain, or require changes to your project, and develop a response that addresses their concerns.</p>
+    </header>
+    <div class="toolbar">
+      <p class="save-state" id="save-status" role="status">Your work stays in this browser.</p>
+      <div class="action-group">
+        <a class="button expo-link" href="https://www.thinglink.com/scene/2172701698718434148" target="_blank" rel="noopener noreferrer">Explore state stakeholder profiles <span aria-hidden="true">↗</span><span class="sr-only"> (opens a new tab)</span></a>
+        <button class="button" type="button" id="reset-assessment"><span aria-hidden="true">↺</span> Reset assessment</button>
+        <button class="button primary" type="button" id="print-assessment" disabled>Print / Save PDF</button>
+      </div>
+    </div>
+    <p class="notification" id="notification" role="status" hidden></p>
+    <div class="workspace" id="workspace">
+      <aside class="sidebar" aria-label="Assessment progress and scores">
+        <div class="progress-panel">
+          <p class="section-kicker">Your progress</p>
+          <div class="progress-rows" aria-live="polite">
+            <p><strong id="assessment-progress">0 of 17 assessed</strong>Influence, interest, and position</p>
+            <p><strong id="priority-progress">0 of 3 plans complete</strong>Three distinct stakeholder choices</p>
+            <p id="contact-progress">First-contact explanation needed</p>
+          </div>
+          <div class="priority-status-block">
+            <p class="section-kicker">Your top three</p>
+            <ol class="priority-summary" id="priority-summary"></ol>
+          </div>
+          <details class="score-summary">
+            <summary>Engagement scores (17)</summary>
+            <p class="field-help">Sorted by score; scores may repeat.</p>
+            <ul class="score-list" id="score-list" tabindex="0" aria-label="Engagement scores for all 17 stakeholders"></ul>
+          </details>
+          <nav class="sidebar-links" aria-label="Assessment sections">
+            <a href="#assess-heading">1. Assess all 17</a>
+            <a href="#priorities-heading">2. Choose your top three</a>
+            <a href="#contact-panel">3. Plan your first contact</a>
+          </nav>
+        </div>
+        <p class="sidebar-note">Engagement scores help focus your attention. Your top three potential barriers are selected using stakeholder concerns, influence, and evidence about your project.</p>
+      </aside>
+      <form id="assessment-form" novalidate>
+        <div class="error-summary" id="validation-summary" role="alert" tabindex="-1" hidden></div>
+        <section class="panel" aria-labelledby="context-heading">
+          <h2 id="context-heading">Set the project context</h2>
+          <p class="support">Identify your selected state and facility context. These optional details help explain your stakeholder assessments.</p>
+          <div class="context-grid">
+            <div class="field"><label for="project">Facility / project</label><input id="project" type="text" maxlength="300" autocomplete="off" placeholder="Name or description"></div>
+            <div class="field"><label for="location">Selected state / location</label><input id="location" type="text" maxlength="300" autocomplete="off" placeholder="State, region, or proposed site"></div>
+            <div class="field"><label for="scale">Facility size / energy demand</label><input id="scale" type="text" maxlength="300" autocomplete="off" placeholder="For example: medium AI, 100 MW"></div>
+            <div class="field"><label for="energy">Proposed energy supply</label><input id="energy" type="text" maxlength="600" autocomplete="off" placeholder="Technologies or portfolio under consideration"></div>
+          </div>
+          <details class="instructions">
+            <summary>Purpose and instructions</summary>
+            <ol>
+              <li>Explore all 17 profiles in the AI Facility Stakeholder Forum. Assess influence and interest from 1 to 5, and identify each stakeholder’s position. Select Unknown / insufficient evidence when appropriate.</li>
+              <li>Influence describes the ability to affect decisions, approvals, resources, or project delivery. Interest describes how directly the project affects the stakeholder’s responsibilities, interests, or community. Scores may repeat.</li>
+              <li>The app calculates influence × interest as an engagement-priority score. A high score can apply to a supporter or to a concerned stakeholder. Use it as a planning aid.</li>
+              <li>Select three distinct stakeholders with the greatest potential to delay, constrain, or require changes to your project. Priority 1 is your greatest potential barrier; priorities 2 and 3 follow. A stakeholder can occupy only one priority.</li>
+              <li>For each selection, explain the concern, potential barrier, supporting evidence and assumptions, and an engagement action or project change that addresses the concern.</li>
+              <li>Identify which of your top three you would engage first and explain why. Review your responses, then use Print / Save PDF. Submit the saved PDF as directed in your course.</li>
+            </ol>
+          </details>
+        </section>
+
+        <div class="section-heading" id="assess-heading">
+          <h2>1. Assess all 17 stakeholders</h2>
+          <p>Score influence and interest from <strong>1 = very low</strong> to <strong>5 = very high</strong>. Choose a position based on the profiles and your selected state and project. All three fields are required for each stakeholder.</p><p>The forum includes state, federal, Tribal Nation, industry, environmental, labor, infrastructure, and local representatives. Assess each role using its profile and your project context.</p>
+          <div class="explanation-box"><p><strong>Engagement priority = Influence × Interest</strong> (1–25). This score helps you plan engagement. Assess the stakeholder’s position and the specific potential barrier separately.</p></div>
+        </div>
+        <div id="stakeholder-fields"></div>
+
+        <div class="section-heading" id="priorities-heading">
+          <h2>2. Choose your top three potential barriers</h2>
+          <p>Choose three different stakeholders. Priority <strong>1</strong> is the greatest potential barrier. Your choices should reflect specific concerns and project evidence. They are not automatically selected from the engagement scores.</p>
+          <p>If a stakeholder is already chosen, change or clear that earlier choice before using the stakeholder in another priority.</p>
+        </div>
+        <div id="priority-fields"></div>
+
+        <section class="panel" id="contact-panel" aria-labelledby="contact-heading">
+          <h2 id="contact-heading">3. Plan your first contact</h2>
+          <p class="support">Which of your top three stakeholders would you engage first, and why? Consider timing, decisions, dependencies, and the concern you need to address.</p>
+          <div class="field">
+            <label for="first-contact">First stakeholder to engage</label>
+            <select id="first-contact" aria-describedby="first-contact-error" required><option value="">Choose from your top three</option></select>
+            <p id="first-contact-error" class="field-error" hidden>Choose one of your three priority stakeholders.</p>
+          </div>
+          <div class="field first-contact-reason">
+            <label for="contact-reason">Why engage this stakeholder first?</label>
+            <textarea id="contact-reason" rows="4" maxlength="6000" placeholder="Choose a stakeholder first, then explain your reasoning." aria-describedby="contact-reason-error" required disabled></textarea>
+            <p id="contact-reason-error" class="field-error" hidden>Explain why you would engage this stakeholder first.</p>
+          </div>
+        </section>
+        <div class="form-end">
+          <p>Review checks all 17 assessments, three distinct choices and plans, and your first-contact explanation.</p>
+          <button class="button primary" id="review-assessment" type="submit" disabled>Review assessment <span aria-hidden="true">→</span></button>
+        </div>
+      </form>
+    </div>
+    <section id="review" aria-labelledby="review-heading" hidden>
+      <div class="review-actions">
+        <button class="button" id="edit-assessment" type="button"><span aria-hidden="true">←</span> Edit assessment</button>
+        <button class="button primary" id="print-report" type="button">Print / Save PDF</button>
+      </div>
+      <div id="report-content"></div>
+    </section>
+    <footer>
+      <p>Scores and positions are your assessments based on the stakeholder profiles and your project context. Completion checks confirm that responses are present; they do not grade accuracy or quality.</p>
+      <p>Drafts stay in this browser when storage is available. Use Print / Save PDF to retain a copy and submit it as directed in your course. Nothing is submitted automatically. Use Reset assessment to clear this app’s draft on a shared device.</p>
+    </footer>
+  </main>
+  <dialog id="reset-dialog" aria-labelledby="reset-title" aria-describedby="reset-description">
+    <h2 id="reset-title">Reset stakeholder assessment?</h2>
+    <p id="reset-description">This clears your responses and this app’s saved draft in this browser. Use Print / Save PDF first if you want to keep a copy.</p>
+    <div class="dialog-actions"><button type="button" class="button" id="cancel-reset">Cancel</button><button type="button" class="button primary" id="confirm-reset">Reset</button></div>
+  </dialog>
+  <noscript><p style="padding:24px">Enable JavaScript to complete and save this assessment.</p></noscript>
+
+  <script id="stakeholder-model">
+    'use strict';
+    const StakeholderModel = (() => {
+      const appId = 'ai-facility-state-stakeholder-priorities';
+      const contextLimits = Object.freeze({project:300, location:300, scale:300, energy:600});
+      const contextLabels = Object.freeze({project:'Facility / project', location:'Selected state / location', scale:'Facility size / energy demand', energy:'Proposed energy supply'});
+      const stakeholders = Object.freeze([
+  {
+    "id": "state-energy",
+    "name": "State Energy Official",
+    "shortName": "State energy"
+  },
+  {
+    "id": "governor",
+    "name": "Governor's Representative",
+    "shortName": "Governor"
+  },
+  {
+    "id": "doe",
+    "name": "US DOE Official",
+    "shortName": "US DOE"
+  },
+  {
+    "id": "microsoft",
+    "name": "Microsoft Representative",
+    "shortName": "Microsoft"
+  },
+  {
+    "id": "google",
+    "name": "Google Representative",
+    "shortName": "Google"
+  },
+  {
+    "id": "apple",
+    "name": "Apple Representative",
+    "shortName": "Apple"
+  },
+  {
+    "id": "nvidia",
+    "name": "Nvidia Representative",
+    "shortName": "Nvidia"
+  },
+  {
+    "id": "epa",
+    "name": "EPA Representative",
+    "shortName": "EPA"
+  },
+  {
+    "id": "tribal-nation",
+    "name": "Tribal Nation Representative",
+    "shortName": "Tribal Nation"
+  },
+  {
+    "id": "sierra-club",
+    "name": "Sierra Club Representative",
+    "shortName": "Sierra Club"
+  },
+  {
+    "id": "greenpeace",
+    "name": "Greenpeace Representative",
+    "shortName": "Greenpeace"
+  },
+  {
+    "id": "water",
+    "name": "Water Representative",
+    "shortName": "Water"
+  },
+  {
+    "id": "waste",
+    "name": "Waste Representative",
+    "shortName": "Waste"
+  },
+  {
+    "id": "grid",
+    "name": "Grid Operations Representative",
+    "shortName": "Grid operations"
+  },
+  {
+    "id": "labor",
+    "name": "Labor Union Representative",
+    "shortName": "Labor union"
+  },
+  {
+    "id": "city",
+    "name": "Local City Representative",
+    "shortName": "Local city"
+  },
+  {
+    "id": "utilities",
+    "name": "Elec Utilities Representative",
+    "shortName": "Electric utilities"
+  }
+].map(stakeholder => Object.freeze(stakeholder)));
+      const positions = Object.freeze({supportive:'Supportive', conditional:'Conditional support', concerned:'Concerned', opposed:'Opposed', unknown:'Unknown / insufficient evidence'});
+      const scoreLabels = Object.freeze(['Very low', 'Low', 'Moderate', 'High', 'Very high']);
+      const planLabels = Object.freeze({concern:'Stakeholder concern', barrier:'Potential barrier', evidence:'Evidence & assumptions', response:'Engagement action / project change'});
+      const textKeys = Object.freeze([...Object.keys(planLabels), 'firstContactReason']);
+      const isStakeholder = id => stakeholders.some(stakeholder => stakeholder.id === id);
+      const validScore = value => Number.isInteger(value) && value >= 1 && value <= 5;
+      const validPosition = value => Object.hasOwn(positions, value);
+
+      function createDraft() {
+        return {
+          appId,
+          schemaVersion:1,
+          context:Object.fromEntries(Object.keys(contextLimits).map(key => [key, ''])),
+          responses:Object.fromEntries(stakeholders.map(stakeholder => [stakeholder.id, {influence:null, interest:null, position:'', ...Object.fromEntries(textKeys.map(key => [key, '']))}])),
+          priorities:[null, null, null],
+          firstContactId:null,
+          updatedAt:null
+        };
+      }
+
+      function validateDraft(candidate) {
+        if (!candidate || typeof candidate !== 'object' || candidate.appId !== appId || candidate.schemaVersion !== 1) throw new Error('This saved draft belongs to a different activity or version.');
+        const draft = createDraft();
+        for (const [key, limit] of Object.entries(contextLimits)) {
+          const value = candidate.context?.[key];
+          if (typeof value !== 'string' || value.length > limit) throw new Error('This saved draft contains invalid project details.');
+          draft.context[key] = value;
+        }
+        for (const stakeholder of stakeholders) {
+          const response = candidate.responses?.[stakeholder.id];
+          if (!response || ![response.influence, response.interest].every(value => value === null || validScore(value))) throw new Error('This saved draft contains an invalid influence or interest score.');
+          if (!(response.position === '' || (typeof response.position === 'string' && validPosition(response.position)))) throw new Error('This saved draft contains an invalid position.');
+          const restored = {influence:response.influence, interest:response.interest, position:response.position};
+          for (const key of textKeys) {
+            if (typeof response[key] !== 'string' || response[key].length > 6000) throw new Error('This saved draft contains an invalid explanation.');
+            restored[key] = response[key];
+          }
+          draft.responses[stakeholder.id] = restored;
+        }
+        if (!Array.isArray(candidate.priorities) || candidate.priorities.length !== 3 || !candidate.priorities.every(id => id === null || isStakeholder(id))) throw new Error('This saved draft contains an invalid priority selection.');
+        const selected = candidate.priorities.filter(id => id !== null);
+        if (new Set(selected).size !== selected.length) throw new Error('This saved draft repeats a stakeholder in the top three.');
+        draft.priorities = [...candidate.priorities];
+        if (!(candidate.firstContactId === null || (isStakeholder(candidate.firstContactId) && selected.includes(candidate.firstContactId)))) throw new Error('This saved draft contains an invalid first-contact selection.');
+        draft.firstContactId = candidate.firstContactId;
+        if (candidate.updatedAt !== null && (typeof candidate.updatedAt !== 'string' || candidate.updatedAt.length > 40 || !Number.isFinite(Date.parse(candidate.updatedAt)))) throw new Error('This saved draft contains an invalid date.');
+        draft.updatedAt = candidate.updatedAt;
+        return draft;
+      }
+
+      function score(response) {
+        return validScore(response.influence) && validScore(response.interest) ? response.influence * response.interest : null;
+      }
+
+      function assignPriority(draft, index, stakeholderId) {
+        if (!Number.isInteger(index) || index < 0 || index > 2 || !(stakeholderId === null || isStakeholder(stakeholderId))) throw new Error('Choose a valid stakeholder and priority.');
+        const conflict = stakeholderId === null ? -1 : draft.priorities.findIndex((selectedId, selectedIndex) => selectedIndex !== index && selectedId === stakeholderId);
+        if (conflict !== -1) return {stakeholderId, priority:conflict + 1};
+        draft.priorities[index] = stakeholderId;
+        if (draft.firstContactId !== null && !draft.priorities.includes(draft.firstContactId)) draft.firstContactId = null;
+        return null;
+      }
+
+      function getStatus(draft) {
+        const missingAssessments = stakeholders.map(stakeholder => {
+          const response = draft.responses[stakeholder.id];
+          const fields = [];
+          if (!validScore(response.influence)) fields.push('influence');
+          if (!validScore(response.interest)) fields.push('interest');
+          if (!validPosition(response.position)) fields.push('position');
+          return {...stakeholder, fields};
+        }).filter(stakeholder => stakeholder.fields.length);
+        const missingPriorities = draft.priorities.map((stakeholderId, index) => {
+          const fields = [];
+          const valid = isStakeholder(stakeholderId);
+          if (!valid || draft.priorities.some((otherId, otherIndex) => otherIndex !== index && otherId === stakeholderId && otherId !== null)) fields.push('stakeholder');
+          if (valid) {
+            for (const key of Object.keys(planLabels)) if (!draft.responses[stakeholderId][key].trim()) fields.push(key);
+          }
+          return {index, stakeholderId, fields};
+        }).filter(priority => priority.fields.length);
+        const contactFields = [];
+        if (!isStakeholder(draft.firstContactId) || !draft.priorities.includes(draft.firstContactId)) contactFields.push('stakeholder');
+        else if (!draft.responses[draft.firstContactId].firstContactReason.trim()) contactFields.push('reason');
+        return {
+          assessed:stakeholders.length - missingAssessments.length,
+          plans:3 - missingPriorities.length,
+          contactComplete:contactFields.length === 0,
+          complete:missingAssessments.length === 0 && missingPriorities.length === 0 && contactFields.length === 0,
+          missingAssessments,
+          missingPriorities,
+          contactFields
+        };
+      }
+
+      function orderedScores(draft) {
+        return [...stakeholders].sort((first, second) => (score(draft.responses[second.id]) ?? -1) - (score(draft.responses[first.id]) ?? -1));
+      }
+
+      return Object.freeze({appId, contextLimits, contextLabels, stakeholders, positions, scoreLabels, planLabels, textKeys, isStakeholder, validScore, createDraft, validateDraft, score, assignPriority, getStatus, orderedScores});
+    })();
+  </script>
+
+  <script id="stakeholder-app">
+    'use strict';
+    (() => {
+      const model = StakeholderModel;
+      const storageKey = model.appId + ':v1';
+      const scoreFields = new Map();
+      const planFields = [];
+      const scoreNodes = new Map();
+      const workspace = document.getElementById('workspace');
+      const review = document.getElementById('review');
+      const form = document.getElementById('assessment-form');
+      const validationSummary = document.getElementById('validation-summary');
+      const saveStatus = document.getElementById('save-status');
+      const notification = document.getElementById('notification');
+      const firstContact = document.getElementById('first-contact');
+      const contactReason = document.getElementById('contact-reason');
+      const resetDialog = document.getElementById('reset-dialog');
+      let draft = model.createDraft();
+      let validationRequested = false;
+      let saveTimer = null;
+      let storageAvailable = true;
+      let resetFocus = null;
+
+      function element(tag, className, text) {
+        const node = document.createElement(tag);
+        if (className) node.className = className;
+        if (text !== undefined) node.textContent = text;
+        return node;
+      }
+
+      function setText(node, text) {
+        if (node.textContent !== text) node.textContent = text;
+      }
+
+      function notify(message, error = false) {
+        notification.hidden = false;
+        notification.className = error ? 'notification error' : 'notification';
+        notification.setAttribute('role', error ? 'alert' : 'status');
+        notification.textContent = message;
+      }
+
+      function saveDraft() {
+        window.clearTimeout(saveTimer);
+        saveTimer = null;
+        draft.updatedAt = new Date().toISOString();
+        try {
+          window.localStorage.setItem(storageKey, JSON.stringify(draft));
+          storageAvailable = true;
+          setText(saveStatus, 'Draft saved in this browser.');
+        } catch {
+          storageAvailable = false;
+          setText(saveStatus, 'Browser saving is unavailable. Use Print / Save PDF to keep your work.');
+        }
+      }
+
+      function scheduleSave() {
+        window.clearTimeout(saveTimer);
+        saveTimer = window.setTimeout(saveDraft, 350);
+        setText(saveStatus, storageAvailable ? 'Saving draft…' : 'Browser saving is unavailable. Use Print / Save PDF to keep your work.');
+      }
+
+      function restoreDraft() {
+        let saved;
+        try {
+          saved = window.localStorage.getItem(storageKey);
+        } catch {
+          storageAvailable = false;
+          setText(saveStatus, 'Browser saving is unavailable. Use Print / Save PDF to keep your work.');
+          return;
+        }
+        if (!saved) return;
+        try {
+          draft = model.validateDraft(JSON.parse(saved));
+          setText(saveStatus, 'Draft restored from this browser.');
+        } catch {
+          notify('The saved draft could not be restored. A blank assessment is open. Refer to any PDF you previously saved to re-enter your responses.', true);
+        }
+      }
+
+      function addOption(select, value, label) {
+        const option = element('option', '', label);
+        option.value = value;
+        select.append(option);
+      }
+
+      function fieldError(input, errorNode, message, show) {
+        errorNode.textContent = message;
+        errorNode.hidden = !show;
+        if (show) input.setAttribute('aria-invalid', 'true');
+        else input.removeAttribute('aria-invalid');
+      }
+
+      function buildAssessments() {
+        const container = document.getElementById('stakeholder-fields');
+        const scoreList = document.getElementById('score-list');
+        model.stakeholders.forEach(stakeholder => {
+          const card = element('section', 'panel stakeholder-card');
+          card.id = 'stakeholder-' + stakeholder.id;
+          card.setAttribute('aria-labelledby', stakeholder.id + '-heading');
+          const header = element('div', 'assessment-header');
+          const titleGroup = element('div', 'assessment-title');
+          const heading = element('h3', '', stakeholder.name);
+          heading.id = stakeholder.id + '-heading';
+          const completion = element('span', 'completion', 'Not assessed');
+          titleGroup.append(heading, completion);
+          const badge = element('div', 'score-badge');
+          const output = element('output', '', '—');
+          output.id = stakeholder.id + '-score';
+          output.setAttribute('aria-label', stakeholder.name + ' engagement score');
+          badge.append(output, element('span', '', 'Engagement score / 25'));
+          header.append(titleGroup, badge);
+          const controls = element('div', 'stakeholder-controls');
+          const inputs = {};
+          const errors = {};
+          for (const key of ['influence', 'interest', 'position']) {
+            const field = element('div', 'field' + (key === 'position' ? ' position-field' : ''));
+            const label = element('label', '', key[0].toUpperCase() + key.slice(1));
+            const select = element('select');
+            select.id = stakeholder.id + '-' + key;
+            select.name = select.id;
+            select.required = true;
+            label.htmlFor = select.id;
+            const contextLabel = element('span', 'sr-only', ' for ' + stakeholder.name);
+            label.append(contextLabel);
+            addOption(select, '', key === 'position' ? 'Choose a position' : 'Choose a score');
+            if (key === 'position') Object.entries(model.positions).forEach(([value, text]) => addOption(select, value, text));
+            else model.scoreLabels.forEach((text, index) => addOption(select, String(index + 1), (index + 1) + ' — ' + text));
+            const error = element('p', 'field-error');
+            error.id = select.id + '-error';
+            error.hidden = true;
+            select.setAttribute('aria-describedby', error.id);
+            select.addEventListener('change', () => {
+              draft.responses[stakeholder.id][key] = key === 'position' ? select.value : select.value === '' ? null : Number(select.value);
+              changed();
+            });
+            field.append(label, select, error);
+            controls.append(field);
+            inputs[key] = select;
+            errors[key] = error;
+          }
+          card.append(header, controls);
+          container.append(card);
+          scoreFields.set(stakeholder.id, {inputs, errors, output, completion});
+          const listItem = element('li');
+          const name = element('span', '', stakeholder.shortName);
+          const value = element('strong', '', '—');
+          listItem.append(name, value);
+          scoreList.append(listItem);
+          scoreNodes.set(stakeholder.id, {item:listItem, value});
+        });
+      }
+
+      function buildPriorities() {
+        const container = document.getElementById('priority-fields');
+        for (let index = 0; index < 3; index += 1) {
+          const card = element('section', 'panel priority-card');
+          card.id = 'priority-' + (index + 1);
+          const heading = element('h3', 'priority-title', 'Priority ' + (index + 1) + (index === 0 ? ' — Greatest potential barrier' : ''));
+          heading.id = 'priority-heading-' + index;
+          card.setAttribute('aria-labelledby', heading.id);
+          const field = element('div', 'field');
+          const label = element('label', '', 'Stakeholder for priority ' + (index + 1));
+          const select = element('select', 'priority-select');
+          select.id = 'priority-select-' + index;
+          select.name = select.id;
+          select.required = true;
+          label.htmlFor = select.id;
+          addOption(select, '', 'Choose / clear stakeholder');
+          model.stakeholders.forEach(stakeholder => addOption(select, stakeholder.id, stakeholder.name));
+          const error = element('p', 'field-error');
+          error.id = 'priority-error-' + index;
+          error.hidden = true;
+          const warning = element('p', 'field-error');
+          warning.id = 'priority-warning-' + index;
+          warning.setAttribute('role', 'alert');
+          warning.hidden = true;
+          select.setAttribute('aria-describedby', error.id + ' ' + warning.id);
+          const selectionNote = element('p', 'selection-help', 'Choose a stakeholder to write your plan.');
+          field.append(label, select, error, warning, selectionNote);
+          const planContainer = element('div', 'plan-fields');
+          const texts = {};
+          const errors = {};
+          const prompts = {
+            concern:'What matters to this stakeholder for your facility and selected location?',
+            barrier:'How could this stakeholder’s decisions, actions, or control of resources delay, constrain, or require changes to your project?',
+            evidence:'Use the stakeholder profile and project or location information. Identify sources, assumptions, and missing information.',
+            response:'Describe a specific engagement action, project change, or commitment that addresses the concern.'
+          };
+          Object.entries(model.planLabels).forEach(([key, text]) => {
+            const textField = element('div', 'field');
+            const textLabel = element('label', '', text);
+            const textarea = element('textarea');
+            textarea.id = 'plan-' + index + '-' + key;
+            textarea.name = textarea.id;
+            textarea.maxLength = 6000;
+            textarea.rows = 4;
+            textarea.required = true;
+            textarea.disabled = true;
+            textarea.placeholder = prompts[key];
+            textLabel.htmlFor = textarea.id;
+            const textError = element('p', 'field-error');
+            textError.id = textarea.id + '-error';
+            textError.hidden = true;
+            textarea.setAttribute('aria-describedby', textError.id);
+            textarea.addEventListener('input', () => {
+              const stakeholderId = draft.priorities[index];
+              if (stakeholderId !== null) {
+                draft.responses[stakeholderId][key] = textarea.value;
+                changed();
+              }
+            });
+            textField.append(textLabel, textarea, textError);
+            planContainer.append(textField);
+            texts[key] = textarea;
+            errors[key] = textError;
+          });
+          const completion = element('span', 'completion', 'Choose a stakeholder');
+          card.append(heading, completion, field, planContainer);
+          container.append(card);
+          const control = {select, error, warning, blockedId:null, selectionNote, texts, errors, completion};
+          planFields.push(control);
+          select.addEventListener('change', () => {
+            const stakeholderId = select.value || null;
+            const conflict = model.assignPriority(draft, index, stakeholderId);
+            select.value = draft.priorities[index] || '';
+            if (conflict) {
+              const stakeholder = model.stakeholders.find(candidate => candidate.id === stakeholderId);
+              control.blockedId = stakeholderId;
+              control.warning.textContent = stakeholder.name + ' is already chosen for priority ' + conflict.priority + '. Change or clear that choice before using this stakeholder here. Your current selection has been kept.';
+              control.warning.hidden = false;
+              control.error.hidden = true;
+              return;
+            }
+            control.blockedId = null;
+            control.warning.hidden = true;
+            control.warning.textContent = '';
+            syncPlan(index);
+            syncFirstContact();
+            changed();
+          });
+        }
+      }
+
+      function syncPlan(index) {
+        const control = planFields[index];
+        const stakeholderId = draft.priorities[index];
+        const stakeholder = model.stakeholders.find(candidate => candidate.id === stakeholderId);
+        control.select.value = stakeholderId || '';
+        control.selectionNote.textContent = stakeholder
+          ? 'Your explanations below belong to ' + stakeholder.name + ' and are retained if you move this stakeholder to another priority.'
+          : 'Choose a stakeholder to write your plan.';
+        for (const key of Object.keys(model.planLabels)) {
+          control.texts[key].disabled = !stakeholder;
+          control.texts[key].value = stakeholder ? draft.responses[stakeholderId][key] : '';
+        }
+      }
+
+      function syncFirstContact() {
+        firstContact.replaceChildren();
+        addOption(firstContact, '', 'Choose from your top three');
+        draft.priorities.forEach((stakeholderId, index) => {
+          const stakeholder = model.stakeholders.find(candidate => candidate.id === stakeholderId);
+          if (stakeholder) addOption(firstContact, stakeholder.id, 'Priority ' + (index + 1) + ' — ' + stakeholder.name);
+        });
+        firstContact.value = draft.firstContactId || '';
+        contactReason.disabled = draft.firstContactId === null;
+        contactReason.value = draft.firstContactId === null ? '' : draft.responses[draft.firstContactId].firstContactReason;
+      }
+
+      function populateFields() {
+        Object.keys(model.contextLimits).forEach(key => {document.getElementById(key).value = draft.context[key];});
+        model.stakeholders.forEach(stakeholder => {
+          const response = draft.responses[stakeholder.id];
+          const control = scoreFields.get(stakeholder.id);
+          for (const key of ['influence', 'interest', 'position']) control.inputs[key].value = response[key] === null ? '' : String(response[key]);
+        });
+        planFields.forEach((control, index) => {
+          control.blockedId = null;
+          control.warning.hidden = true;
+          control.warning.textContent = '';
+          syncPlan(index);
+        });
+        syncFirstContact();
+        updateProgress();
+      }
+
+      function clearResolvedWarnings() {
+        planFields.forEach((control, index) => {
+          if (control.blockedId !== null && !draft.priorities.some((stakeholderId, otherIndex) => otherIndex !== index && stakeholderId === control.blockedId)) {
+            control.blockedId = null;
+            control.warning.hidden = true;
+            control.warning.textContent = '';
+          }
+        });
+      }
+
+      function updateProgress() {
+        clearResolvedWarnings();
+        const status = model.getStatus(draft);
+        setText(document.getElementById('assessment-progress'), status.assessed + ' of ' + model.stakeholders.length + ' assessed');
+        setText(document.getElementById('priority-progress'), status.plans + ' of 3 plans complete');
+        setText(document.getElementById('contact-progress'), status.contactComplete ? 'First-contact explanation complete' : 'First-contact explanation needed');
+        const missingScores = new Map(status.missingAssessments.map(stakeholder => [stakeholder.id, stakeholder.fields]));
+        model.stakeholders.forEach(stakeholder => {
+          const control = scoreFields.get(stakeholder.id);
+          const value = model.score(draft.responses[stakeholder.id]);
+          setText(control.output, value === null ? '—' : String(value));
+          const missing = missingScores.get(stakeholder.id) || [];
+          setText(control.completion, missing.length ? 'Assessment incomplete' : 'Assessed');
+          control.completion.className = missing.length ? 'completion' : 'completion complete';
+          for (const key of ['influence', 'interest', 'position']) fieldError(control.inputs[key], control.errors[key], key === 'position' ? 'Choose a position, including Unknown when evidence is insufficient.' : 'Choose a score from 1 to 5.', validationRequested && missing.includes(key));
+          setText(scoreNodes.get(stakeholder.id).value, value === null ? '—' : String(value));
+        });
+        const scoreList = document.getElementById('score-list');
+        model.orderedScores(draft).forEach(stakeholder => scoreList.append(scoreNodes.get(stakeholder.id).item));
+        const summary = document.getElementById('priority-summary');
+        summary.replaceChildren();
+        const missingPlans = new Map(status.missingPriorities.map(priority => [priority.index, priority.fields]));
+        planFields.forEach((control, index) => {
+          const stakeholderId = draft.priorities[index];
+          const stakeholder = model.stakeholders.find(candidate => candidate.id === stakeholderId);
+          summary.append(element('li', '', stakeholder ? stakeholder.shortName : 'Not selected'));
+          const missing = missingPlans.get(index) || [];
+          setText(control.completion, !missing.length ? 'Plan complete' : stakeholder ? 'Plan incomplete' : 'Choose a stakeholder');
+          control.completion.className = !missing.length ? 'completion complete' : 'completion';
+          fieldError(control.select, control.error, 'Choose a different stakeholder for each of priorities 1–3.', validationRequested && missing.includes('stakeholder') && control.warning.hidden);
+          for (const key of Object.keys(model.planLabels)) fieldError(control.texts[key], control.errors[key], 'Explain the ' + model.planLabels[key].toLowerCase() + '.', validationRequested && stakeholder && missing.includes(key));
+        });
+        fieldError(firstContact, document.getElementById('first-contact-error'), 'Choose one of your three priority stakeholders.', validationRequested && status.contactFields.includes('stakeholder'));
+        fieldError(contactReason, document.getElementById('contact-reason-error'), 'Explain why you would engage this stakeholder first.', validationRequested && status.contactFields.includes('reason'));
+        if (validationRequested) renderValidation(status);
+      }
+
+      function changed() {
+        notification.hidden = true;
+        updateProgress();
+        scheduleSave();
+      }
+
+      function renderValidation(status) {
+        validationSummary.replaceChildren();
+        validationSummary.hidden = status.complete;
+        if (status.complete) return;
+        validationSummary.append(element('h2', '', 'Complete the highlighted responses before reviewing'));
+        const list = element('ul');
+        const addIssue = (target, text) => {
+          const item = element('li');
+          const link = element('a', '', text);
+          link.href = '#' + target;
+          item.append(link);
+          list.append(item);
+        };
+        status.missingAssessments.forEach(stakeholder => addIssue(stakeholder.id + '-' + stakeholder.fields[0], stakeholder.name + ': ' + stakeholder.fields.join(', ') + ' needed.'));
+        status.missingPriorities.forEach(priority => {
+          const first = priority.fields[0];
+          addIssue(first === 'stakeholder' ? 'priority-select-' + priority.index : 'plan-' + priority.index + '-' + first, 'Priority ' + (priority.index + 1) + ': ' + priority.fields.map(key => key === 'stakeholder' ? 'a distinct stakeholder' : model.planLabels[key].toLowerCase()).join(', ') + ' needed.');
+        });
+        if (status.contactFields.length) addIssue(status.contactFields[0] === 'stakeholder' ? 'first-contact' : 'contact-reason', 'First contact: ' + (status.contactFields[0] === 'stakeholder' ? 'choose one of your top three stakeholders.' : 'explain why you would engage this stakeholder first.'));
+        validationSummary.append(list);
+      }
+
+      function ensureComplete() {
+        validationRequested = true;
+        updateProgress();
+        if (model.getStatus(draft).complete) return true;
+        workspace.hidden = false;
+        review.hidden = true;
+        validationSummary.focus();
+        return false;
+      }
+
+      function generatedDate() {
+        return new Intl.DateTimeFormat(undefined, {year:'numeric', month:'long', day:'numeric', hour:'numeric', minute:'2-digit'}).format(new Date());
+      }
+
+      function reportTable(headers, rows, className) {
+        const wrap = element('div', 'tablewrap');
+        const table = element('table', className);
+        const head = element('thead');
+        const headRow = element('tr');
+        headers.forEach(text => {
+          const cell = element('th', '', text);
+          cell.scope = 'col';
+          headRow.append(cell);
+        });
+        head.append(headRow);
+        const body = element('tbody');
+        rows.forEach(values => {
+          const row = element('tr');
+          values.forEach(value => row.append(element('td', '', value)));
+          body.append(row);
+        });
+        table.append(head, body);
+        wrap.append(table);
+        return wrap;
+      }
+
+      function renderReport() {
+        const container = document.getElementById('report-content');
+        const status = model.getStatus(draft);
+        container.replaceChildren();
+        const header = element('section', 'panel report-header');
+        const title = element('h2', 'review-title', 'State Stakeholder Priorities & Engagement Plan');
+        title.id = 'review-heading';
+        title.tabIndex = -1;
+        header.append(title, element('p', 'review-subtitle', 'AI facility development · State stakeholder assessment'));
+        header.append(element('p', 'review-status' + (status.complete ? '' : ' draft'), (status.complete ? 'Complete' : 'Draft') + ' · ' + status.assessed + '/' + model.stakeholders.length + ' assessed · ' + status.plans + '/3 plans complete'));
+        const context = element('dl', 'report-context');
+        Object.entries(model.contextLabels).forEach(([key, text]) => {
+          const group = element('div');
+          group.append(element('dt', '', text), element('dd', '', draft.context[key].trim() || 'Not provided'));
+          context.append(group);
+        });
+        header.append(context, element('p', 'report-scale', 'Report generated: ' + generatedDate()));
+        container.append(header);
+
+        const assessments = element('section', 'panel');
+        assessments.append(element('h2', '', 'All 17 stakeholder assessments'));
+        const scoreRows = model.stakeholders.map(stakeholder => {
+          const response = draft.responses[stakeholder.id];
+          const score = model.score(response);
+          return [stakeholder.name, response.influence === null ? 'Not scored' : String(response.influence), response.interest === null ? 'Not scored' : String(response.interest), score === null ? 'Not scored' : String(score), model.positions[response.position] || 'Not selected'];
+        });
+        assessments.append(reportTable(['Stakeholder', 'Influence', 'Interest', 'Engagement score', 'Position'], scoreRows, 'assessment-table'));
+        assessments.append(element('p', 'report-note', 'Influence and interest: 1 = very low; 5 = very high. Engagement priority = influence × interest (1–25). Scores may repeat and do not establish opposition or barrier severity.'));
+        container.append(assessments);
+
+        const priorities = element('section', 'panel');
+        priorities.append(element('h2', '', 'Your top three potential barriers'));
+        const priorityRows = draft.priorities.map((stakeholderId, index) => {
+          const stakeholder = model.stakeholders.find(candidate => candidate.id === stakeholderId);
+          const score = stakeholder ? model.score(draft.responses[stakeholderId]) : null;
+          return [String(index + 1), stakeholder ? stakeholder.name : 'Not selected', score === null ? 'Not scored' : String(score)];
+        });
+        priorities.append(reportTable(['Priority', 'Stakeholder', 'Engagement score'], priorityRows, 'priority-table'));
+        priorities.append(element('p', 'report-note', 'Priority 1 = greatest potential barrier; priorities 2 and 3 follow. Three distinct stakeholders are required. The learner selects these priorities using concerns, influence, and project evidence.'));
+        container.append(priorities);
+
+        draft.priorities.forEach((stakeholderId, index) => {
+          const stakeholder = model.stakeholders.find(candidate => candidate.id === stakeholderId);
+          const section = element('section', 'panel report-response');
+          section.append(element('h3', '', 'Priority ' + (index + 1) + ' — ' + (stakeholder ? stakeholder.name : 'Not selected')));
+          if (stakeholder) {
+            const response = draft.responses[stakeholderId];
+            const score = model.score(response);
+            section.append(element('p', 'report-rank', 'Engagement score: ' + (score === null ? 'Not scored' : score + '/25') + ' · Position: ' + (model.positions[response.position] || 'Not selected')));
+          }
+          Object.entries(model.planLabels).forEach(([key, label]) => {
+            section.append(element('h4', '', label), element('p', 'report-explanation', stakeholder ? draft.responses[stakeholderId][key].trim() || 'Not provided' : 'Not provided'));
+          });
+          container.append(section);
+        });
+
+        const contact = element('section', 'panel report-response');
+        const stakeholder = model.stakeholders.find(candidate => candidate.id === draft.firstContactId);
+        contact.append(element('h2', '', 'First stakeholder to engage'), element('p', 'report-rank', stakeholder ? stakeholder.name : 'Not selected'));
+        contact.append(element('p', 'report-explanation', stakeholder ? draft.responses[stakeholder.id].firstContactReason.trim() || 'Not provided' : 'Not provided'));
+        container.append(contact, element('p', 'report-note', 'This report records the learner’s judgments and supporting explanations. Nothing is submitted automatically. Submit the saved PDF as directed in the course.'));
+      }
+
+      function showReview() {
+        if (!ensureComplete()) return;
+        saveDraft();
+        renderReport();
+        workspace.hidden = true;
+        review.hidden = false;
+        document.getElementById('review-heading').focus();
+        window.scrollTo({top:0, behavior:'auto'});
+      }
+
+      function showEditor() {
+        workspace.hidden = false;
+        review.hidden = true;
+        document.getElementById('project').focus();
+        window.scrollTo({top:0, behavior:'auto'});
+      }
+
+      function printAssessment() {
+        saveDraft();
+        renderReport();
+        window.print();
+      }
+
+      restoreDraft();
+      buildAssessments();
+      buildPriorities();
+      populateFields();
+      document.getElementById('review-assessment').disabled = false;
+      document.getElementById('print-assessment').disabled = false;
+
+      Object.keys(model.contextLimits).forEach(key => document.getElementById(key).addEventListener('input', event => {
+        draft.context[key] = event.target.value;
+        changed();
+      }));
+      firstContact.addEventListener('change', () => {
+        draft.firstContactId = firstContact.value || null;
+        contactReason.disabled = draft.firstContactId === null;
+        contactReason.value = draft.firstContactId === null ? '' : draft.responses[draft.firstContactId].firstContactReason;
+        changed();
+      });
+      contactReason.addEventListener('input', () => {
+        if (draft.firstContactId !== null) {
+          draft.responses[draft.firstContactId].firstContactReason = contactReason.value;
+          changed();
+        }
+      });
+      form.addEventListener('submit', event => {event.preventDefault(); showReview();});
+      document.getElementById('edit-assessment').addEventListener('click', showEditor);
+      ['print-assessment', 'print-report'].forEach(id => document.getElementById(id).addEventListener('click', printAssessment));
+      document.getElementById('reset-assessment').addEventListener('click', () => {
+        resetFocus = document.activeElement;
+        resetDialog.showModal();
+        document.getElementById('cancel-reset').focus();
+      });
+      document.getElementById('cancel-reset').addEventListener('click', () => {resetDialog.close(); resetFocus?.focus();});
+      document.getElementById('confirm-reset').addEventListener('click', () => {
+        window.clearTimeout(saveTimer);
+        saveTimer = null;
+        draft = model.createDraft();
+        validationRequested = false;
+        validationSummary.hidden = true;
+        try {
+          window.localStorage.removeItem(storageKey);
+          setText(saveStatus, 'Assessment reset. Your work stays in this browser.');
+        } catch {
+          setText(saveStatus, 'Browser saving is unavailable. Use Print / Save PDF to keep your work.');
+        }
+        populateFields();
+        resetDialog.close();
+        showEditor();
+        notify('Assessment reset. All scores, stakeholder choices, and plans are blank.');
+      });
+      window.addEventListener('beforeprint', renderReport);
+      window.addEventListener('pagehide', () => {if (saveTimer !== null) saveDraft();});
+      document.addEventListener('visibilitychange', () => {if (document.hidden && saveTimer !== null) saveDraft();});
+    })();
+  </script>
+</body>
+</html>
